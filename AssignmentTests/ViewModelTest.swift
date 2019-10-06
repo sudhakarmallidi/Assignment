@@ -14,7 +14,7 @@ class DataListViewModelTest: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         viewModel = ViewModel()
-        let dataResult = DataResult(resourceID: "1", fields: [], records: [], links: nil, limit: 1, total: 3)
+        //let dataResult = DataResult(resourceID: "1", fields: [], records: [], links: nil, limit: 1, total: 3)
         let result = DataResult(resourceID: "1", fields: [], records: [], links: nil,
                                 limit: 1,
                                 total: 3)

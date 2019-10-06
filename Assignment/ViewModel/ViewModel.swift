@@ -44,12 +44,6 @@ class ViewModel: NSObject {
         return self.dataArray[sectionIndex].rows.count
     }
 }
-
-extension Array {
-    subscript(safe index: Int) -> Element? {
-        return index >= 0 && index < count ? self[index] : nil
-    }
-}
 struct Section: Sequence, IteratorProtocol {
     var year: String = ""
     var rows: [Record] = []
