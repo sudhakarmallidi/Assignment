@@ -17,6 +17,8 @@ class ViewModel: NSObject {
                 self.responseDataModel = responseDataModel
                 self.dataArray = self.getDataArray(responseDataModel: responseDataModel)
                 callBack(responseDataModel, error)
+            } else {
+                callBack(nil, error)
             }
         }
     }

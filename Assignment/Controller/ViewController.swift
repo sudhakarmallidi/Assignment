@@ -27,11 +27,23 @@ class ViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.title = "Mobile data used in a year"
         self.viewModel.getMobileDataUsageData(offset: 0) { (responseDataModel, error) in
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
+            if let _ = responseDataModel {
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            } else if let error = error {
+                DispatchQueue.main.async {
+                    self.showAlert(message: error.localizedDescription)
+                }
             }
         }
     }
+    func showAlert(title: String = "Error", message: String) {
+        let alert = UIAlertController(title: title, message: message,         preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

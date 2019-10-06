@@ -22,8 +22,6 @@ class ServiceManager {
                 print("Error: \(String(describing: error))")
                 callBack(nil, error)
             } else {
-                //let httpResponse = response as? HTTPURLResponse
-               // print("httpResponse: \(String(describing: httpResponse))")
                 if let jsonData = data {
                     print("httpResponseData: \(String(describing: String(data: jsonData, encoding: .utf8)))")
                     let dataModel = try? JSONDecoder().decode(ResponseDataModel.self, from: jsonData)
