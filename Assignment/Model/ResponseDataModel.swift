@@ -63,3 +63,28 @@ struct Record: Codable, Equatable,Comparable {
         id = try values.decodeIfPresent(Int.self, forKey: .id)
     }
 }
+
+struct Section: Sequence, IteratorProtocol {
+    var year: String = ""
+    var rows: [Record] = []
+    var currentIndex = 0
+    var totalVolumeOfData: Double {
+        return self.rows.map({Double($0.volumeOfMobileData ?? "0") ?? 0}).reduce(0, +)
+    }
+    var minVolOfMobileData: String {
+        return rows.min()?.volumeOfMobileData ?? ""
+    }
+    
+    init(records: [Record], yearObj: String) {
+        self.year = yearObj
+        self.rows = records
+    }
+    mutating func next() -> Record? {
+        defer {
+            print("pre: \(currentIndex)")
+            currentIndex = currentIndex + 1
+            print("post: \(currentIndex)")
+        }
+        return rows[safe: currentIndex]
+    }
+}
