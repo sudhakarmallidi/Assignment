@@ -25,6 +25,7 @@
 		1E95EA5E233732AF001772FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E95EA5C233732AF001772FE /* LaunchScreen.storyboard */; };
 		1E95EA74233732B0001772FE /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E95EA73233732B0001772FE /* AssignmentUITests.swift */; };
 		1E99F2812340F8A3005978F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99F2802340F8A3005978F1 /* Extensions.swift */; };
+		1EA21A74234A58D1002B48E6 /* SectionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA21A73234A58D1002B48E6 /* SectionTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		1E95EA73233732B0001772FE /* AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentUITests.swift; sourceTree = "<group>"; };
 		1E95EA75233732B0001772FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E99F2802340F8A3005978F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1EA21A73234A58D1002B48E6 /* SectionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				1E22FC79234A44EB00C853FB /* ViewModelTest.swift */,
+				1EA21A73234A58D1002B48E6 /* SectionTest.swift */,
 				1E22FC77234A44AF00C853FB /* ViewControllerTest.swift */,
 				1E22FC7B234A4E2A00C853FB /* ExtensionsTest.swift */,
 				1E95EA6A233732B0001772FE /* Info.plist */,
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E22FC7A234A44EB00C853FB /* ViewModelTest.swift in Sources */,
+				1EA21A74234A58D1002B48E6 /* SectionTest.swift in Sources */,
 				1E22FC7C234A4E2A00C853FB /* ExtensionsTest.swift in Sources */,
 				1E22FC78234A44AF00C853FB /* ViewControllerTest.swift in Sources */,
 			);
